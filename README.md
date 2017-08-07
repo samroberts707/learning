@@ -1,2 +1,6 @@
-# learning
-Repo to keep all code I make while learning new stuff
+# Learning
+
+If you expect high quality code here, you can to the wrong neighbourhood motherf***er
+
+#[Angular](https://github.com/samroberts707/learning/tree/master/angular2)
+#[PHP](https://github.com/samroberts707/learning/tree/master/php)
