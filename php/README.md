@@ -8,6 +8,12 @@ Recapping on any Object Orientated things I might need for future projects.
 
 Make good unit tests that can be reused for future projects that are Object Orientated projects
 
+### Running Tests
+
+To run the current set of tests run the following command:
+
+`phpunit --bootstrap objects/person.php tests/personTest`
+
 ## Objective 3 - Travis
 
 Get Travis running automated tests on my repo whenever I make a commit and notify me of any issues
