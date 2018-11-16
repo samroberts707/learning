@@ -4,6 +4,7 @@ new Vue({
     playerHealth: 100,
     monsterHealth: 100,
     gameIsRunning: false,
+    turns: [],
   },
   methods: {
     // Start game method to initialize variables
@@ -11,10 +12,16 @@ new Vue({
       this.playerHealth = 100;
       this.monsterHealth = 100;
       this.gameIsRunning = true;
+      this.turns = [];
     },
     // Basic Attack against monster
     attack: function() {
-      this.monsterHealth -= this.calcDamage(3,10);
+      var playerDamage = this.calcDamage(3,10)
+      this.monsterHealth -= playerDamage;
+      this.turns.unshift({
+        isPlayer: true,
+        text: 'Player hits monster for ' + playerDamage,
+      });
       if(this.checkWin()) {
         return;
       }
@@ -22,7 +29,12 @@ new Vue({
     },
     // Special Attack against monster with increased damage
     specialAttack: function() {
-      this.monsterHealth -= this.calcDamage(10,20);
+      var playerDamage = this.calcDamage(10,20)
+      this.monsterHealth -= playerDamage;
+      this.turns.unshift({
+        isPlayer: true,
+        text: 'Player hits monster hard for ' + playerDamage,
+      });
       if(this.checkWin()) {
         return;
       }
@@ -35,6 +47,10 @@ new Vue({
       } else {
         this.playerHealth = 100;
       }
+      this.turns.unshift({
+        isPlayer: true,
+        text: 'Player heals for 10',
+      });
       this.monsterAttack();
     },
     // Set game running to false to force a game reset
@@ -66,7 +82,12 @@ new Vue({
     },
     // Monster attacks the player
     monsterAttack: function() {
-      this.playerHealth -= this.calcDamage(5,12);
+      var monsterDamage = this.calcDamage(5,12)
+      this.playerHealth -= monsterDamage;
+      this.turns.unshift({
+        isPlayer: false,
+        text: 'Monster hits player for ' + monsterDamage,
+      });
       this.checkWin();
     },
   }
