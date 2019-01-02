@@ -1,4 +1,4 @@
-# hello-world
+# Stock Trader
 
 ## Project setup
 ```
