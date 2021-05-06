@@ -17,12 +17,13 @@
       <div class="page-banner__intro">
         <p>DONT FORGET TO REPLACE ME LATER!</p>
       </div>
-    </div>  
+    </div>
   </div>
 
   <div class="container container--narrow page-section">
     
     <?php 
+        // Get the parent ID, if none it will return 0
         $theParent = wp_get_post_parent_id(get_the_ID());
         if ($theParent) {
     ?>
