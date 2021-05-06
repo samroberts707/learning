@@ -1,1 +1,7 @@
-<h1>Greetings from header.php</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <?php wp_head(); ?>
+    </head>
+    <body></body>
+</html>
