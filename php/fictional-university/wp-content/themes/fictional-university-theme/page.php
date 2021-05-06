@@ -1,0 +1,15 @@
+<?php 
+
+    // Get blog posts
+    // Loop through all blog posts
+    while(have_posts()) {
+        // Get the current post in the while loop
+        the_post();?>
+        <h1>This a page not a post</h1>
+        <!-- Get the title from the current post in the loop -->
+        <h2><?php the_title(); ?></h2>
+        <!-- Get the content from the current post in the loop -->
+        <p><?php the_content(); ?></p>
+    <?php }
+
+?>
