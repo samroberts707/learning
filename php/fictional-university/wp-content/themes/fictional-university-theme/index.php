@@ -1,4 +1,6 @@
-<?php 
+<?php
+    // Find the header.php file and display
+    get_header();
 
     // Get blog posts
     // Loop through all blog posts
@@ -21,3 +23,6 @@
 
 <!-- Get Site Tagline from WP Admin -->
 <p><?php blogInfo('description'); ?></p>
+
+<!-- Find the footer.php file and display -->
+<?php get_footer(); ?>

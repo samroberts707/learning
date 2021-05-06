@@ -1,4 +1,6 @@
 <?php 
+    // Find the header.php file and display
+    get_header();
 
     // Get blog posts
     // Loop through all blog posts
@@ -13,3 +15,6 @@
     <?php }
 
 ?>
+
+<!-- Find the footer.php file and display -->
+<?php get_footer(); ?>
