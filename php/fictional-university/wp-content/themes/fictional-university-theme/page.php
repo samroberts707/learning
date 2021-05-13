@@ -32,13 +32,43 @@
     </div>
     <?php } ?>
 
-    <!-- <div class="page-links">
-      <h2 class="page-links__title"><a href="#">About Us</a></h2>
+    <?php 
+    // Check to see if the current page is a parent page
+    $isParent = get_pages(array(
+      'child_of' => get_the_ID()
+    ));
+    
+    // So long as the current page is either a child or a parent
+    // We don't want to display sub-nav if the page is a single level
+    if ($theParent or $isParent) { 
+      
+    ?>
+
+    <div class="page-links">
+      <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent); ?>"><?php echo get_the_title($theParent); ?></a></h2>
       <ul class="min-list">
-        <li class="current_page_item"><a href="#">Our History</a></li>
-        <li><a href="#">Our Goals</a></li>
+        <?php 
+          if ($theParent) {
+            // If this is a child page set parent ID
+            $findChildrenOf = $theParent;
+          } else {
+            // else set the current page ID
+            $findChildrenOf = get_the_ID();
+          }
+
+          wp_list_pages(array(
+            // Don't output the title list item
+            'title_li' => NULL,
+            // Only list children of the page ID
+            'child_of' => $findChildrenOf,
+            // Listen to the order defined in the CMS
+            'sort_column' => 'menu_order',
+          ));
+        ?>
       </ul>
-    </div> -->
+    </div>
+
+    <?php } ?>
 
     <div class="generic-content">
       <?php the_content(); ?>
