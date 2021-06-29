@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-GB
+name: 'Craft Aws Assets'
+primary: true
+siteGroup: 4032a5bd-da89-4fdd-a3ac-36e3764a447b # Craft Aws Assets
+sortOrder: 1
