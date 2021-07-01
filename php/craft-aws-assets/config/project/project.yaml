@@ -1,8 +1,13 @@
-dateModified: 1624975357
+dateModified: 1625138763
 email:
   fromEmail: sam@nucreative.co.uk
   fromName: 'Craft Aws Assets'
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
 system:
   edition: solo
   live: true
