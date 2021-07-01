@@ -21,61 +21,62 @@ To do this go to Services -> IAM -> Policies -> **Create Policy**.
 Click the JSON tab and paste in the following, being sure to replace `REPLACE-WITH-BUCKET-NAME` with the bucket name we just created.
 
 <detials>
-    <summary>JSON</summary>
-    <pre>
-    {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "acm:ListCertificates",
-                    "cloudfront:GetDistribution",
-                    "cloudfront:GetStreamingDistribution",
-                    "cloudfront:GetDistributionConfig",
-                    "cloudfront:ListDistributions",
-                    "cloudfront:ListCloudFrontOriginAccessIdentities",
-                    "cloudfront:CreateInvalidation",
-                    "cloudfront:GetInvalidation",
-                    "cloudfront:ListInvalidations",
-                    "elasticloadbalancing:DescribeLoadBalancers",
-                    "iam:ListServerCertificates",
-                    "sns:ListSubscriptionsByTopic",
-                    "sns:ListTopics",
-                    "waf:GetWebACL",
-                    "waf:ListWebACLs"
-                ],
-                "Resource": "*"
-            },
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "s3:GetBucketLocation",
-                    "s3:ListAllMyBuckets"
-                ],
-                "Resource": "*"
-            },
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "s3:ListBucket"
-                ],
-                "Resource": [
-                    "arn:aws:s3:::REPLACE-WITH-BUCKET-NAME"
-                ]
-            },
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "s3:*"
-                ],
-                "Resource": [
-                    "arn:aws:s3:::REPLACE-WITH-BUCKET-NAME/*"
-                ]
-            }
-        ]
-    }
-    </pre>
+<summary>JSON</summary>
+<br>
+<pre>
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "acm:ListCertificates",
+                "cloudfront:GetDistribution",
+                "cloudfront:GetStreamingDistribution",
+                "cloudfront:GetDistributionConfig",
+                "cloudfront:ListDistributions",
+                "cloudfront:ListCloudFrontOriginAccessIdentities",
+                "cloudfront:CreateInvalidation",
+                "cloudfront:GetInvalidation",
+                "cloudfront:ListInvalidations",
+                "elasticloadbalancing:DescribeLoadBalancers",
+                "iam:ListServerCertificates",
+                "sns:ListSubscriptionsByTopic",
+                "sns:ListTopics",
+                "waf:GetWebACL",
+                "waf:ListWebACLs"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::REPLACE-WITH-BUCKET-NAME"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::REPLACE-WITH-BUCKET-NAME/*"
+            ]
+        }
+    ]
+}
+</pre>
 </details>
 
 Once copied in and the bucket name replaced click through to **Tags** and then to **Review**. Here we create the policy name, I will be following this naming convention moving forward `PROJECT_NAME-policy`. Add a brief description and create the policy.
