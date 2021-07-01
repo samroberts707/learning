@@ -20,7 +20,7 @@ To do this go to Services -> IAM -> Policies -> **Create Policy**.
 
 Click the JSON tab and paste in the following, being sure to replace `REPLACE-WITH-BUCKET-NAME` with the bucket name we just created.
 
-<detials>
+<details>
 <summary>JSON</summary>
 <br>
 <pre>
@@ -78,7 +78,7 @@ Click the JSON tab and paste in the following, being sure to replace `REPLACE-WI
 }
 </pre>
 </details>
-
+<br>
 Once copied in and the bucket name replaced click through to **Tags** and then to **Review**. Here we create the policy name, I will be following this naming convention moving forward `PROJECT_NAME-policy`. Add a brief description and create the policy.
 
 
