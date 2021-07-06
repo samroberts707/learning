@@ -1,0 +1,9 @@
+format: webp
+handle: blogBanners
+height: 400
+interlace: none
+mode: crop
+name: 'Blog Banners'
+position: center-center
+quality: 82
+width: 1920

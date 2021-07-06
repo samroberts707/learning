@@ -1,0 +1,31 @@
+contentColumnType: string
+fieldGroup: 0b1cd1d7-d73c-452a-9654-61670e1265ac # Common
+handle: blogBanner
+instructions: ''
+name: 'Blog Banner'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:1a3754aa-3e0a-4115-8536-dd6f043cb3fb' # Craft Test S3
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:1a3754aa-3e0a-4115-8536-dd6f043cb3fb' # Craft Test S3
+  singleUploadLocationSubpath: /blogs/banners/
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

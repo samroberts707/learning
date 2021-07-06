@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: homepage
+name: Homepage
+propagationMethod: all
+siteSettings:
+  cccc8443-cdd7-4097-82bb-a9306eccddb6: # Craft Aws Assets
+    enabledByDefault: true
+    hasUrls: true
+    template: index
+    uriFormat: __home__
+type: single
